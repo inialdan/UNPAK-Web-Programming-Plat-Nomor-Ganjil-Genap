@@ -2,7 +2,7 @@
 
 Tugas 2 Web Programming - PHP <br/>
 Nama : Aldan Rizki Santosa <br/>
-NPM : 065118112 ><br/><br/>
+NPM : 065118112 <br/><br/>
 
 Tugas Struktur Kondisi dan Perulangan<br/>
 1. Silahkan dibuat studi kasus untuk implementasi kasus perulangan atau kondisi (Kasus dan masalah bebas)<br/>
