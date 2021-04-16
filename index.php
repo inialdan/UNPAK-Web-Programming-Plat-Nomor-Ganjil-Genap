@@ -1,8 +1,6 @@
 <?php
 
     require "config.php";
-    session_start();
-    date_default_timezone_set("Asia/Jakarta");
 
     $data = findAll("SELECT * FROM plat_nomor ORDER BY id ASC");
 
@@ -11,6 +9,7 @@
 <html>
 
     <head>
+        <title>Web Programming</title>
     </head>
 
     <body>
@@ -46,7 +45,7 @@
 
         <table border="1">
             <tr>
-                <td align="center" colspan="7">Kendaraan Yang Melanggar (Genap)</td>
+                <td align="center" colspan="7">Kendaraan Yang Melanggar (Ganjil)</td>
             </tr>
             <tr>
                 <td>No.</td>
@@ -58,7 +57,7 @@
                 <td>Masa Berlaku</td>
             </tr>
             <?php foreach($data as $d) {
-                if($d['nomor_polisi'] % 2 == 0){ ?>
+                if($d['nomor_polisi'] % 2 != 0){ ?>
                 <tr>
                     <td align="center"><?php echo $d['id']; ?></td>
                     <td align="center"><?php echo $d['kode_wilayah']; ?></td>
@@ -76,7 +75,7 @@
 
         <table border="1">
             <tr>
-                <td align="center" colspan="7">Kendaraan Yang Melanggar (Ganjil)</td>
+                <td align="center" colspan="7">Kendaraan Yang Melanggar (Genap)</td>
             </tr>
             <tr>
                 <td>No.</td>
@@ -88,7 +87,7 @@
                 <td>Masa Berlaku</td>
             </tr>
             <?php foreach($data as $d) {
-                if($d['nomor_polisi'] % 2 != 0){ ?>
+                if($d['nomor_polisi'] % 2 == 0){ ?>
                 <tr>
                     <td align="center"><?php echo $d['id']; ?></td>
                     <td align="center"><?php echo $d['kode_wilayah']; ?></td>
